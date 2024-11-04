@@ -273,7 +273,16 @@ public enum TransactionEnvelopeXDR: XDRCodable {
             }
         }
     }
-    
+
+    public func txSignatureBaseV1(network:Network) throws -> Data? {
+        switch self {
+        case .v0, .feeBump:
+            return nil
+        case .v1(let tev1):
+            return try tev1.tx.signatureBase(network: network)
+        }
+    }
+
     public func appendSignature(signature:DecoratedSignatureXDR) {
         switch self {
         case .v0(let tev0):
