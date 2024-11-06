@@ -9,11 +9,11 @@
 import Foundation
 
 public struct MemoType {
-    static let MEMO_TYPE_NONE: Int32 = 0
-    static let MEMO_TYPE_TEXT: Int32 = 1
-    static let MEMO_TYPE_ID: Int32 = 2
-    static let MEMO_TYPE_HASH: Int32 = 3
-    static let MEMO_TYPE_RETURN: Int32 = 4
+    public static let MEMO_TYPE_NONE: Int32 = 0
+    public static let MEMO_TYPE_TEXT: Int32 = 1
+    public static let MEMO_TYPE_ID: Int32 = 2
+    public static let MEMO_TYPE_HASH: Int32 = 3
+    public static let MEMO_TYPE_RETURN: Int32 = 4
 }
 
 public enum MemoXDR: XDRCodable {
